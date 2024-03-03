@@ -11,7 +11,7 @@ function App() {
   };
   return (
     <div className="App">
-      <Hello/>
+      {/* <Hello/>
       <Welcome></Welcome>
       <div className={styles.box}>App</div>
       <h1 style={{
@@ -20,7 +20,11 @@ function App() {
       }}>
         Hello, {name}.<p>{naver.name}</p>
       </h1>
-      <a href={naver.url}>{naver.name}</a>
+      <a href={naver.url}>{naver.name}</a> */}
+
+      <Hello age={10}></Hello>
+      <Hello age={20}></Hello>
+      <Hello age={30}></Hello>
     </div>
   );
 }
