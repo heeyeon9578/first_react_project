@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 export default function CreateWord(){
     const days = useFetch("http://localhost:3001/days");
-    const navigate = useNavigate;
+    const navigate = useNavigate();
    
     function onSubmit(e){
         e.preventDefault();
