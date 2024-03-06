@@ -1,34 +1,55 @@
 import useFetch from "./hooks/useFetch"
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
+import { useState } from "react";
 export default function CreateWord(){
-    const days = useFetch("http://localhost:3001/days");
+    const selectedCountry = useParams().eng;
+    console.log(selectedCountry);
+    let dayURL = '';
+    if(selectedCountry==="eng"){
+        dayURL = "http://localhost:3001/words";
+    }else if(selectedCountry==="jap"){
+        dayURL = "http://localhost:3002/words";
+    }
+
+    let dayURL2 = '';
+    if(selectedCountry==="eng"){
+        dayURL2= "http://localhost:3001/days";
+    }else if(selectedCountry==="jap"){
+        dayURL2 = "http://localhost:3002/days";
+    }
+    const days = useFetch(dayURL2);
     const navigate = useNavigate();
-   
+    const [isLoading, setIsLoading]= useState(false);
     function onSubmit(e){
         e.preventDefault();
-        console.log(engRef.current.value);
-        console.log(korRef.current.value);
-        console.log(dayRef.current.value);
-    
-        fetch(`http://localhost:3001/words/`,{
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json',
-            },
-            body: JSON.stringify({
-                day: dayRef.current.value,
-                eng:engRef.current.value,
-                kor:korRef.current.value,
-                isDone:false
-            }),
-    
-        }).then(res=>{
-            if(res.ok){
-                alert("생성이 완료되었습니다.");
-               navigate(`/day/${dayRef.current.value}`)
-            }
-        })
+        // console.log(engRef.current.value);
+        // console.log(korRef.current.value);
+        // console.log(dayRef.current.value);
+        if(!isLoading){
+            setIsLoading(true);
+            fetch(dayURL,{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                },
+                body: JSON.stringify({
+                    day: dayRef.current.value,
+                    eng:engRef.current.value,
+                    kor:korRef.current.value,
+                    isDone:false
+                }),
+        
+            }).then(res=>{
+                if(res.ok){
+                    alert("생성이 완료되었습니다.");
+                   navigate(`/${selectedCountry}/day/${dayRef.current.value}`)
+                   setIsLoading(false);
+                }
+            })
+        }
+        
     }
     const engRef = useRef(null);
     const korRef = useRef(null);
@@ -56,7 +77,9 @@ export default function CreateWord(){
                 </select>
                 
             </div>
-            <button type="submit" >저장</button>
+            <button style={{
+                opacity: isLoading? 0.3: 1,
+            }} type="submit"> {isLoading? "Saving...": "저장"}</button>
         </form>
     )
 }

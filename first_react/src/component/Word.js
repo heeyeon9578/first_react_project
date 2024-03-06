@@ -1,15 +1,24 @@
 import { useState } from "react";
-
+import { useParams } from "react-router";
 export default function Word({word: w}){
+    const selectedCountry = useParams().eng;
+    console.log(selectedCountry);
     const [word, setWord]=useState(w);
     const [isShow, setIsShow] = useState(false);
     const [isDone,setIsDone]=useState(word.isDone);
+    let dayURL = '';
+
+    if(selectedCountry==="eng"){
+        dayURL = "1";
+    }else if(selectedCountry==="jap"){
+        dayURL = "2";
+    }
     function toggleShow(){
         setIsShow(!isShow);
     }
     function toggleDone(){
         //setIsDone(!isDone);
-        fetch(`http://localhost:3001/words/${word.id}`,{
+        fetch(`http://localhost:300${dayURL}/words/${word.id}`,{
             method:'PUT',
             headers:{
                 'Content-Type':'application/json',
@@ -28,7 +37,7 @@ export default function Word({word: w}){
     }
     function del(){
         if(window.confirm('삭제하시겠습니까?')){
-            fetch(`http://localhost:3001/words/${word.id}`,{
+            fetch(`http://localhost:300${dayURL}/words/${word.id}`,{
                 method: "DELETE",
             }).then(res=>{
                 if(res.ok){

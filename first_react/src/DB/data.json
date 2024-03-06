@@ -15,6 +15,18 @@
     {
       "day": 4,
       "id": "4"
+    },
+    {
+      "id": "b50d",
+      "day": 5
+    },
+    {
+      "id": "b187",
+      "day": 6
+    },
+    {
+      "id": "369c",
+      "day": 7
     }
   ],
   "words": [
@@ -23,14 +35,14 @@
       "day": 3,
       "eng": "school",
       "kor": "학교",
-      "isDone": true
+      "isDone": false
     },
     {
       "id": "6",
       "day": 3,
       "eng": "pencil",
       "kor": "연필",
-      "isDone": false
+      "isDone": true
     },
     {
       "day": "3",
@@ -45,13 +57,6 @@
       "kor": "집",
       "isDone": false,
       "id": "8"
-    },
-    {
-      "day": "2",
-      "eng": "mouse",
-      "kor": "쥐",
-      "isDone": false,
-      "id": "9"
     },
     {
       "day": "4",
@@ -79,14 +84,14 @@
       "day": "1",
       "eng": "sungjin",
       "kor": "성진",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "dc20",
       "day": "1",
       "eng": "heeyeon",
       "kor": "희연",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "08b1",
@@ -100,7 +105,7 @@
       "day": "2",
       "eng": "sungjin2",
       "kor": "성진2",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "7979",
@@ -117,17 +122,31 @@
       "isDone": false
     },
     {
-      "id": "7342",
-      "day": "1",
-      "eng": "heeyeon9578",
-      "kor": "희연",
+      "id": "e08b",
+      "day": "5",
+      "eng": "mac",
+      "kor": "맥",
       "isDone": false
     },
     {
-      "id": "5a0b",
-      "day": "1",
-      "eng": "",
-      "kor": "",
+      "id": "c10f",
+      "day": "5",
+      "eng": "cute",
+      "kor": "귀여운",
+      "isDone": false
+    },
+    {
+      "id": "b024",
+      "day": "4",
+      "eng": "heeyeon4",
+      "kor": "희연4",
+      "isDone": false
+    },
+    {
+      "id": "912b",
+      "day": "7",
+      "eng": "gheesfdf",
+      "kor": "32dsfsdfsd",
       "isDone": false
     }
   ]

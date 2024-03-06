@@ -130,3 +130,30 @@ button {
   height: 40px;
   font-size: 20px;
 }
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 전체 화면 높이 */
+  background-color: #f0f2f5; /* 배경색 */
+}
+
+.welcome h1 {
+  margin: 20px;
+  padding: 10px;
+  font-family: 'Arial', sans-serif;
+  color: #333; /* 글자 색상 */
+}
+
+.welcome h1 a {
+  text-decoration: none;
+  color: #007bff; /* 링크 색상 */
+  font-size: 24px; /* 글자 크기 */
+  transition: color 0.3s ease-in-out; /* 색상 변경 애니메이션 */
+}
+
+.welcome h1 a:hover {
+  color: #0056b3; /* 링크에 마우스를 올렸을 때 색상 */
+}
