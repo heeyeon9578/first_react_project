@@ -11,34 +11,34 @@ export default function Day(){
     console.log(selectedDay);
     const day=selectedDay.day;
     let dayURL = '';
-
+    let whatWord = '';
     if(selectedCountry==="eng"){
         dayURL = "1";
+        whatWord= "영어단어";
     }else if(selectedCountry==="jap"){
         dayURL = "2";
+        whatWord= "일본어 단어";
+    }else if(selectedCountry==="star"){
+        dayURL = "3";
+        whatWord= "내 단어";
     }
     const words = useFetch(`http://localhost:300${dayURL}/words?day=${day}`);
-    //const[words, setWords]=  useState([]);
-    //const wordList = dummy.words.filter(word=>(
-        //word.day === Number(day)
-   // ));
-    // useEffect(()=>{
-    //     fetch(`http://localhost:3001/words?day=${day}`)
-    //     .then(res=>{
-    //      return res.json()
-    //     })
-    //     .then(data=>{
-    //      setWords(data);
-    //     })
- 
-    //  },[]);
-    //console.log(wordList);
+  
     return(
         <>
-        <Header kind={selectedCountry=== 'eng'? 'eng':'jap'}></Header>
+        <Header kind={selectedCountry}></Header>
         <h2>Day : {day}</h2>
-        {words.length ===0 && <span>Loading...</span>}
+
         <table>
+        <thead>
+            <tr>
+                <th>확인 여부</th>
+                { selectedCountry != "star" &&(<th>나만의 단어장에 추가</th>)}
+                <th>{whatWord}</th>
+                <th>뜻</th>
+                <th>조작</th>
+            </tr>
+        </thead>
         <tbody>
             {words.map(word=>(
                  <Word word={word} key={word.id}></Word>

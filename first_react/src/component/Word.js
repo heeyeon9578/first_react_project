@@ -1,3 +1,4 @@
+import { func } from "prop-types";
 import { useState } from "react";
 import { useParams } from "react-router";
 export default function Word({word: w}){
@@ -6,13 +7,19 @@ export default function Word({word: w}){
     const [word, setWord]=useState(w);
     const [isShow, setIsShow] = useState(false);
     const [isDone,setIsDone]=useState(word.isDone);
+    const [isChecked, setIsChecked] = useState(word.isChecked);
+
+
     let dayURL = '';
 
     if(selectedCountry==="eng"){
         dayURL = "1";
     }else if(selectedCountry==="jap"){
         dayURL = "2";
+    }else if(selectedCountry==="star"){
+        dayURL = "3";
     }
+
     function toggleShow(){
         setIsShow(!isShow);
     }
@@ -35,6 +42,54 @@ export default function Word({word: w}){
             }
         })
     }
+    function toggleChecked(isChecked){
+        let dayURL2='';
+        if(isChecked==false){
+            dayURL2=3;
+        }else{
+            dayURL2= dayURL;
+        }
+        console.log("dayURL2: ",dayURL2);
+        //setIsDone(!isDone);
+        fetch(`http://localhost:300${dayURL2}/words/`,{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+            },
+            body: JSON.stringify({
+                ...word,
+                isChecked:!isChecked
+            }),
+
+        })
+        .then(res=>{
+            if(res.ok){
+                setIsChecked(!isChecked);
+                fetch(`http://localhost:300${dayURL}/words/${word.id}`,{
+                    method: "DELETE",
+                }).then(res=>{
+                    if(res.ok){
+
+                        setWord({id:0})
+                        fetch(`http://localhost:300${dayURL2}/days`,{
+                            method:'POST',
+                            headers:{
+                                'Content-Type':'application/json',
+                            },
+                            body: JSON.stringify({
+                                day: word.day.toString(),
+                            }),
+                    
+                        }).then(res=>{
+                            if(res.ok){
+                               
+                            }
+                        })
+                    }
+                });
+            }
+        })
+    }
     function del(){
         if(window.confirm('삭제하시겠습니까?')){
             fetch(`http://localhost:300${dayURL}/words/${word.id}`,{
@@ -51,11 +106,23 @@ export default function Word({word: w}){
         return null;
     }
 
+  
+       
+
     return(
         <tr className={isDone? 'off' :''}>
             <td>
                 <input type="checkbox" checked={isDone} onChange={toggleDone}/>
             </td>
+            { isChecked ===false &&(
+                <td>
+                 <input type="checkbox" checked={isChecked} onChange={()=>toggleChecked(isChecked)}/>
+                </td>
+            )
+
+
+            }
+            
             <td>
                 {word.eng}
             </td>

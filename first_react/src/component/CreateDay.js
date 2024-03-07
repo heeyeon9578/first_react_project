@@ -9,6 +9,8 @@ export default function CreateDay(){
         dayURL = "http://localhost:3001/days";
     }else if(selectedCountry==="jap"){
         dayURL = "http://localhost:3002/days";
+    }else{
+        dayURL = "http://localhost:3003/days";
     }
     const days = useFetch(dayURL);
     const navigate = useNavigate();
@@ -19,7 +21,7 @@ export default function CreateDay(){
                 'Content-Type':'application/json',
             },
             body: JSON.stringify({
-                day: days.length+1,
+                day: (days.length+1).toString(),
             }),
     
         }).then(res=>{

@@ -1,0 +1,46 @@
+{
+  "days": [
+    {
+      "id": "bac1",
+      "day": "1"
+    },
+    {
+      "id": "9b6c",
+      "day": "5"
+    },
+    {
+      "id": "6ef8",
+      "day": "3"
+    },
+    {
+      "id": "1218",
+      "day": "3"
+    }
+  ],
+  "words": [
+    {
+      "id": "1618",
+      "day": "1",
+      "eng": "sungjin",
+      "kor": "성진",
+      "isDone": false,
+      "isChecked": true
+    },
+    {
+      "id": "c10f",
+      "day": "5",
+      "eng": "cute",
+      "kor": "귀여운",
+      "isDone": false,
+      "isChecked": true
+    },
+    {
+      "id": "105",
+      "day": 3,
+      "eng": "いぬ",
+      "kor": "개",
+      "isDone": false,
+      "isChecked": true
+    }
+  ]
+}

@@ -8,6 +8,9 @@ export default function Welcome(){
              <h1>
                 <Link to="/jap">토익 일본어 단어집</Link>
             </h1>
+            <h1>
+                <Link to="/star">나만의 단어집</Link>
+            </h1>
         </div>
         
 

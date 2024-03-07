@@ -7,10 +7,16 @@ export default function CreateWord(){
     const selectedCountry = useParams().eng;
     console.log(selectedCountry);
     let dayURL = '';
+    let whatKind ='';
     if(selectedCountry==="eng"){
         dayURL = "http://localhost:3001/words";
+        whatKind='영단어';
     }else if(selectedCountry==="jap"){
         dayURL = "http://localhost:3002/words";
+        whatKind='일본어 단어';
+    }else{
+        dayURL = "http://localhost:3003/words";
+        whatKind='나만의 단어';
     }
 
     let dayURL2 = '';
@@ -18,6 +24,8 @@ export default function CreateWord(){
         dayURL2= "http://localhost:3001/days";
     }else if(selectedCountry==="jap"){
         dayURL2 = "http://localhost:3002/days";
+    }else{
+        dayURL2 = "http://localhost:3003/days";
     }
     const days = useFetch(dayURL2);
     const navigate = useNavigate();
@@ -60,7 +68,7 @@ export default function CreateWord(){
     return(
         <form onSubmit={onSubmit}>
             <div className="input_area"> 
-                <label>Eng</label>
+                <label>{whatKind}</label>
                 <input type="text" placeholder="computer" ref={engRef}></input>
             </div>
             <div className="input_area">

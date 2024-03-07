@@ -1,153 +1,140 @@
 {
   "days": [
     {
-      "id": "1",
-      "day": 1
+      "id": "774a",
+      "day": "1"
     },
     {
-      "id": "2",
-      "day": 2
+      "id": "a58b",
+      "day": "2"
     },
     {
-      "id": "3",
-      "day": 3
+      "id": "f86a",
+      "day": "3"
     },
     {
-      "day": 4,
-      "id": "4"
+      "id": "af15",
+      "day": "4"
     },
     {
-      "id": "b50d",
-      "day": 5
-    },
-    {
-      "id": "b187",
-      "day": 6
-    },
-    {
-      "id": "369c",
-      "day": 7
+      "id": "7d8f",
+      "day": "5"
     }
   ],
   "words": [
-    {
-      "id": "5",
-      "day": 3,
-      "eng": "school",
-      "kor": "학교",
-      "isDone": false
-    },
-    {
-      "id": "6",
-      "day": 3,
-      "eng": "pencil",
-      "kor": "연필",
-      "isDone": true
-    },
-    {
-      "day": "3",
-      "eng": "window",
-      "kor": "창문",
-      "isDone": false,
-      "id": "7"
-    },
-    {
-      "day": "3",
-      "eng": "house",
-      "kor": "집",
-      "isDone": false,
-      "id": "8"
-    },
-    {
-      "day": "4",
-      "eng": "monkey",
-      "kor": "원숭이",
-      "isDone": false,
-      "id": "10"
-    },
-    {
-      "day": "4",
-      "eng": "apple",
-      "kor": "사과",
-      "isDone": true,
-      "id": "11"
-    },
-    {
-      "day": "3",
-      "eng": "apple",
-      "kor": "사과",
-      "isDone": false,
-      "id": "12"
-    },
-    {
-      "id": "1618",
-      "day": "1",
-      "eng": "sungjin",
-      "kor": "성진",
-      "isDone": true
-    },
     {
       "id": "dc20",
       "day": "1",
       "eng": "heeyeon",
       "kor": "희연",
-      "isDone": true
-    },
-    {
-      "id": "08b1",
-      "day": "2",
-      "eng": "heeyeon2",
-      "kor": "희연2",
-      "isDone": false
+      "isDone": true,
+      "isChecked": false
     },
     {
       "id": "9b0a",
       "day": "2",
       "eng": "sungjin2",
       "kor": "성진2",
-      "isDone": true
-    },
-    {
-      "id": "7979",
-      "day": "3",
-      "eng": "sungjin3",
-      "kor": "성진3",
-      "isDone": false
-    },
-    {
-      "id": "83fc",
-      "day": "3",
-      "eng": "heeyeon3",
-      "kor": "희연3",
-      "isDone": false
+      "isDone": true,
+      "isChecked": false
     },
     {
       "id": "e08b",
       "day": "5",
       "eng": "mac",
       "kor": "맥",
-      "isDone": false
-    },
-    {
-      "id": "c10f",
-      "day": "5",
-      "eng": "cute",
-      "kor": "귀여운",
-      "isDone": false
-    },
-    {
-      "id": "b024",
-      "day": "4",
-      "eng": "heeyeon4",
-      "kor": "희연4",
-      "isDone": false
+      "isDone": false,
+      "isChecked": false
     },
     {
       "id": "912b",
       "day": "7",
       "eng": "gheesfdf",
       "kor": "32dsfsdfsd",
-      "isDone": false
+      "isDone": false,
+      "isChecked": false
+    },
+
+    {
+      "id": "114",
+      "day": 2,
+      "eng": "cat",
+      "kor": "고양이",
+      "isDone": false,
+      "isChecked": false
+    },
+    {
+      "id": "115",
+      "day": 3,
+      "eng": "dog",
+      "kor": "개",
+      "isDone": false,
+      "isChecked": false
+    },
+    {
+      "id": "116",
+      "day": 4,
+      "eng": "bird",
+      "kor": "새",
+      "isDone": false,
+      "isChecked": false
+    },
+    {
+      "id": "117",
+      "day": 5,
+      "eng": "fish",
+      "kor": "물고기",
+      "isDone": false,
+      "isChecked": false
+    },
+    {
+      "id": "118",
+      "day": 1,
+      "eng": "apple",
+      "kor": "사과",
+      "isDone": false,
+      "isChecked": false
+    },
+    {
+      "id": "119",
+      "day": 2,
+      "eng": "banana",
+      "kor": "바나나",
+      "isDone": false,
+      "isChecked": false
+    },
+    {
+      "id": "120",
+      "day": 3,
+      "eng": "strawberry",
+      "kor": "딸기",
+      "isDone": false,
+      "isChecked": false
+    },
+    {
+      "id": "121",
+      "day": 4,
+      "eng": "watermelon",
+      "kor": "수박",
+      "isDone": false,
+      "isChecked": false
+    },
+    {
+      "id": "122",
+      "day": 5,
+      "eng": "orange",
+      "kor": "오렌지",
+      "isDone": false,
+      "isChecked": false
+    },
+    {
+      "id": "123",
+      "day": 1,
+      "eng": "grape",
+      "kor": "포도",
+      "isDone": false,
+      "isChecked": false
     }
+  
   ]
 }
