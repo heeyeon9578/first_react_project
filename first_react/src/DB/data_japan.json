@@ -19,33 +19,25 @@
     {
       "id": "7d8f",
       "day": "5"
+    },
+    {
+      "id": "1580",
+      "day": "6"
+    },
+    {
+      "id": "63f2",
+      "day": "7"
+    },
+    {
+      "id": "a936",
+      "day": "8"
+    },
+    {
+      "id": "ada7",
+      "day": "9"
     }
   ],
   "words": [
-    {
-      "id": "2",
-      "day": 2,
-      "eng": "あか",
-      "kor": "빨강",
-      "isDone": false,
-      "isChecked": false
-    },
-    {
-      "id": "3",
-      "day": 3,
-      "eng": "あとで [後で]",
-      "kor": "나중에",
-      "isDone": true,
-      "isChecked": false
-    },
-    {
-      "id": "104",
-      "day": 2,
-      "eng": "ねこ",
-      "kor": "고양이",
-      "isDone": false,
-      "isChecked": false
-    },
     {
       "id": "106",
       "day": 4,
@@ -55,35 +47,11 @@
       "isChecked": false
     },
     {
-      "id": "107",
-      "day": 5,
-      "eng": "さかな",
-      "kor": "물고기",
-      "isDone": false,
-      "isChecked": false
-    },
-    {
       "id": "108",
       "day": 1,
       "eng": "りんご",
       "kor": "사과",
-      "isDone": false,
-      "isChecked": false
-    },
-    {
-      "id": "109",
-      "day": 2,
-      "eng": "ばなな",
-      "kor": "바나나",
-      "isDone": false,
-      "isChecked": false
-    },
-    {
-      "id": "110",
-      "day": 3,
-      "eng": "いちご",
-      "kor": "딸기",
-      "isDone": false,
+      "isDone": true,
       "isChecked": false
     },
     {
@@ -103,10 +71,26 @@
       "isChecked": false
     },
     {
-      "id": "113",
-      "day": 1,
-      "eng": "ぶどう",
-      "kor": "포도",
+      "id": "f780",
+      "day": "8",
+      "eng": "ff",
+      "kor": "ff",
+      "isDone": false,
+      "isChecked": false
+    },
+    {
+      "id": "ae41",
+      "day": "3",
+      "eng": "111",
+      "kor": "222",
+      "isDone": false,
+      "isChecked": false
+    },
+    {
+      "id": "39d3",
+      "day": "1",
+      "eng": "34534",
+      "kor": "34534",
       "isDone": false,
       "isChecked": false
     }

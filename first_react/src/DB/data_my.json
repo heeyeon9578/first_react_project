@@ -15,6 +15,62 @@
     {
       "id": "1218",
       "day": "3"
+    },
+    {
+      "id": "5e9d",
+      "day": "3"
+    },
+    {
+      "id": "01e9",
+      "day": "6"
+    },
+    {
+      "id": "9e63",
+      "day": "3"
+    },
+    {
+      "id": "8ae7",
+      "day": "8"
+    },
+    {
+      "id": "0c64",
+      "day": "5"
+    },
+    {
+      "id": "756e",
+      "day": "5"
+    },
+    {
+      "id": "f2fb",
+      "day": "11"
+    },
+    {
+      "id": "ce6f",
+      "day": "12"
+    },
+    {
+      "id": "9cde",
+      "day": "2"
+    },
+    {
+      "id": "2719",
+      "day": "2"
+    },
+    {
+      "id": "47a5",
+      "day": "2"
+    },
+    {
+      "id": "a10e",
+      "day": "4"
+    },
+    {
+      "id": "2147",
+      "day": "1"
+    },
+    {
+      "id": "a2a6",
+      "day": "12"
     }
   ],
   "words": [
@@ -39,6 +95,110 @@
       "day": 3,
       "eng": "いぬ",
       "kor": "개",
+      "isDone": false,
+      "isChecked": true
+    },
+    {
+      "id": "115",
+      "day": 3,
+      "eng": "dog",
+      "kor": "개",
+      "isDone": false,
+      "isChecked": true
+    },
+    {
+      "id": "3",
+      "day": 3,
+      "eng": "あとで [後で]",
+      "kor": "나중에",
+      "isDone": true,
+      "isChecked": true
+    },
+    {
+      "id": "4998",
+      "day": "6",
+      "eng": "e",
+      "kor": "e",
+      "isDone": false,
+      "isChecked": true
+    },
+    {
+      "id": "122",
+      "day": 5,
+      "eng": "orange",
+      "kor": "오렌지",
+      "isDone": true,
+      "isChecked": true
+    },
+    {
+      "id": "109",
+      "day": 2,
+      "eng": "ばなな",
+      "kor": "바나나",
+      "isDone": false,
+      "isChecked": true
+    },
+    {
+      "id": "104",
+      "day": 2,
+      "eng": "ねこ",
+      "kor": "고양이",
+      "isDone": false,
+      "isChecked": true
+    },
+    {
+      "id": "2",
+      "day": 2,
+      "eng": "あか",
+      "kor": "빨강",
+      "isDone": false,
+      "isChecked": true
+    },
+    {
+      "id": "81b2",
+      "day": "1",
+      "eng": "34534",
+      "kor": "3453453",
+      "isDone": true,
+      "isChecked": true
+    },
+    {
+      "id": "449c",
+      "day": "3",
+      "eng": "45345353",
+      "kor": "3453",
+      "isDone": false,
+      "isChecked": true
+    },
+    {
+      "id": "116",
+      "day": 4,
+      "eng": "bird",
+      "kor": "새",
+      "isDone": true,
+      "isChecked": true
+    },
+    {
+      "id": "113",
+      "day": 1,
+      "eng": "ぶどう",
+      "kor": "포도",
+      "isDone": false,
+      "isChecked": true
+    },
+    {
+      "id": "eb69",
+      "day": "1",
+      "eng": "ㅅㄷㅅㄷㄱ",
+      "kor": "ㄷㄱㅅㄷㅅㄷㄱ",
+      "isDone": false,
+      "isChecked": true
+    },
+    {
+      "id": "87c0",
+      "day": "12",
+      "eng": "ㅕ",
+      "kor": "ㅕ",
       "isDone": false,
       "isChecked": true
     }

@@ -8,6 +8,7 @@ export default function CreateWord(){
     console.log(selectedCountry);
     let dayURL = '';
     let whatKind ='';
+    let uniqueDays = '';
     if(selectedCountry==="eng"){
         dayURL = "http://localhost:3001/words";
         whatKind='영단어';
@@ -46,7 +47,8 @@ export default function CreateWord(){
                     day: dayRef.current.value,
                     eng:engRef.current.value,
                     kor:korRef.current.value,
-                    isDone:false
+                    isDone:false,
+                    isChecked:(selectedCountry==="star"? true:false),
                 }),
         
             }).then(res=>{
@@ -64,7 +66,7 @@ export default function CreateWord(){
     const dayRef = useRef(null);
 
 
-
+    uniqueDays = new Map(days.map(day => [day.day, day]));
     return(
         <form onSubmit={onSubmit}>
             <div className="input_area"> 
@@ -78,10 +80,12 @@ export default function CreateWord(){
             <div className="input_area">
                 <label>Day</label>
                 <select ref={dayRef}>
-                    {days.map(day=>(
+                    {/* {days.map(day=>(
                         <option key={day.id} value={day.day}>{day.day}</option>
-                    ))}
-                    
+                    ))} */}
+                     {[...uniqueDays.values()].sort((a, b) => a.day - b.day).map(day=>(
+                         <option key={day.id} value={day.day}>{day.day}</option>
+            ))}
                 </select>
                 
             </div>

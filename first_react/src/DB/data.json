@@ -19,6 +19,34 @@
     {
       "id": "7d8f",
       "day": "5"
+    },
+    {
+      "id": "08e5",
+      "day": "6"
+    },
+    {
+      "id": "c209",
+      "day": "7"
+    },
+    {
+      "id": "1442",
+      "day": "8"
+    },
+    {
+      "id": "b134",
+      "day": "9"
+    },
+    {
+      "id": "744d",
+      "day": "10"
+    },
+    {
+      "id": "c886",
+      "day": "11"
+    },
+    {
+      "id": "65fe",
+      "day": "12"
     }
   ],
   "words": [
@@ -54,28 +82,11 @@
       "isDone": false,
       "isChecked": false
     },
-
     {
       "id": "114",
       "day": 2,
       "eng": "cat",
       "kor": "고양이",
-      "isDone": false,
-      "isChecked": false
-    },
-    {
-      "id": "115",
-      "day": 3,
-      "eng": "dog",
-      "kor": "개",
-      "isDone": false,
-      "isChecked": false
-    },
-    {
-      "id": "116",
-      "day": 4,
-      "eng": "bird",
-      "kor": "새",
       "isDone": false,
       "isChecked": false
     },
@@ -108,7 +119,7 @@
       "day": 3,
       "eng": "strawberry",
       "kor": "딸기",
-      "isDone": false,
+      "isDone": true,
       "isChecked": false
     },
     {
@@ -120,21 +131,20 @@
       "isChecked": false
     },
     {
-      "id": "122",
-      "day": 5,
-      "eng": "orange",
-      "kor": "오렌지",
-      "isDone": false,
-      "isChecked": false
-    },
-    {
       "id": "123",
       "day": 1,
       "eng": "grape",
       "kor": "포도",
       "isDone": false,
       "isChecked": false
+    },
+    {
+      "id": "3bbc",
+      "day": "1",
+      "eng": "ㅕ쇼",
+      "kor": "셔",
+      "isDone": false,
+      "isChecked": false
     }
-  
   ]
 }
