@@ -2,12 +2,13 @@
 import { useParams } from "react-router";
 import Header from "./Header";
 import { useEffect, useState } from "react";
-import Word from "./Word";
+import Word, { Iword } from "./Word";
 import useFetch from "./hooks/useFetch";
+import React from "react";
 export default function Day(){
     const selectedCountry = useParams().eng;
     console.log(selectedCountry);
-    const selectedDay = useParams();
+    const selectedDay = useParams<{day:string}>();
     console.log(selectedDay);
     const day=selectedDay.day;
     let dayURL = '';
@@ -22,7 +23,7 @@ export default function Day(){
         dayURL = "3";
         whatWord= "내 단어";
     }
-    const words = useFetch(`http://localhost:300${dayURL}/words?day=${day}`);
+    const words: Iword[] = useFetch(`http://localhost:300${dayURL}/words?day=${day}`);
   
     return(
         <>

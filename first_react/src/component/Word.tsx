@@ -1,7 +1,20 @@
 import { func } from "prop-types";
+import React from "react";
 import { useState } from "react";
 import { useParams } from "react-router";
-export default function Word({word: w}){
+
+interface IProps {
+    word:Iword;
+}
+export interface Iword{
+    id: number;
+    day: string;
+    eng: string;
+    kor: string;
+    isDone: boolean;
+    isChecked: boolean;
+}
+export default function Word({word: w}:IProps){
     const selectedCountry = useParams().eng;
     console.log(selectedCountry);
     const [word, setWord]=useState(w);
@@ -45,7 +58,7 @@ export default function Word({word: w}){
     function toggleChecked(isChecked){
         let dayURL2='';
         if(isChecked==false){
-            dayURL2=3;
+            dayURL2='3';
         }else{
             dayURL2= dayURL;
         }
@@ -70,7 +83,7 @@ export default function Word({word: w}){
                 }).then(res=>{
                     if(res.ok){
 
-                        setWord({id:0})
+                        setWord({...word, id:0})
                         fetch(`http://localhost:300${dayURL2}/days`,{
                             method:'POST',
                             headers:{
@@ -96,7 +109,7 @@ export default function Word({word: w}){
                 method: "DELETE",
             }).then(res=>{
                 if(res.ok){
-                    setWord({id:0})
+                    setWord({...word,id:0})
                 }
             });
         }

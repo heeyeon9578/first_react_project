@@ -3,12 +3,14 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useState } from "react";
+import {IDay} from "./DayList";
+import React from "react";
 export default function CreateWord(){
     const selectedCountry = useParams().eng;
     console.log(selectedCountry);
     let dayURL = '';
     let whatKind ='';
-    let uniqueDays = '';
+   
     if(selectedCountry==="eng"){
         dayURL = "http://localhost:3001/words";
         whatKind='영단어';
@@ -28,25 +30,26 @@ export default function CreateWord(){
     }else{
         dayURL2 = "http://localhost:3003/days";
     }
-    const days = useFetch(dayURL2);
+    const days:IDay[] = useFetch(dayURL2);
     const navigate = useNavigate();
     const [isLoading, setIsLoading]= useState(false);
-    function onSubmit(e){
+    function onSubmit(e: React.FormEvent){
         e.preventDefault();
-        // console.log(engRef.current.value);
-        // console.log(korRef.current.value);
-        // console.log(dayRef.current.value);
-        if(!isLoading){
+      
+        if(!isLoading&&dayRef.current&& engRef.current&&korRef.current){
             setIsLoading(true);
+            const day = dayRef.current.value;
+            const eng = engRef.current.value;
+            const kor = korRef.current.value;
             fetch(dayURL,{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json',
                 },
                 body: JSON.stringify({
-                    day: dayRef.current.value,
-                    eng:engRef.current.value,
-                    kor:korRef.current.value,
+                    day,
+                    eng,
+                    kor,
                     isDone:false,
                     isChecked:(selectedCountry==="star"? true:false),
                 }),
@@ -54,18 +57,19 @@ export default function CreateWord(){
             }).then(res=>{
                 if(res.ok){
                     alert("생성이 완료되었습니다.");
-                   navigate(`/${selectedCountry}/day/${dayRef.current.value}`)
+                   navigate(`/${selectedCountry}/day/${day}`)
                    setIsLoading(false);
                 }
             })
         }
         
     }
-    const engRef = useRef(null);
-    const korRef = useRef(null);
-    const dayRef = useRef(null);
+    const engRef = useRef<HTMLInputElement>(null);
+    const korRef = useRef<HTMLInputElement>(null);
+    const dayRef = useRef<HTMLSelectElement>(null);
 
-
+    // Map 객체를 사용하여 중복된 day 값을 제거합니다.
+    let uniqueDays = new Map<string, IDay>();
     uniqueDays = new Map(days.map(day => [day.day, day]));
     return(
         <form onSubmit={onSubmit}>
@@ -83,9 +87,13 @@ export default function CreateWord(){
                     {/* {days.map(day=>(
                         <option key={day.id} value={day.day}>{day.day}</option>
                     ))} */}
-                     {[...uniqueDays.values()].sort((a, b) => a.day - b.day).map(day=>(
-                         <option key={day.id} value={day.day}>{day.day}</option>
-            ))}
+                    
+                     {[...uniqueDays.values()]
+                        .sort((a, b) => parseInt(a.day, 10) - parseInt(b.day, 10))
+                        .map(day => (
+                            <option key={day.id} value={day.day}>{day.day}</option>
+                    ))
+                    }
                 </select>
                 
             </div>
