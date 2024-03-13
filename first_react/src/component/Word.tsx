@@ -55,7 +55,7 @@ export default function Word({word: w}:IProps){
             }
         })
     }
-    function toggleChecked(isChecked){
+    function toggleChecked(isChecked:any){
         let dayURL2='';
         if(isChecked==false){
             dayURL2='3';
