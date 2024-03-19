@@ -1,1 +1,1 @@
-# first_react_project
+# 토익 영단어/일본어 단어집
