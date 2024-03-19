@@ -1,6 +1,7 @@
 import useFetch from "./hooks/useFetch.ts";
 import { useParams } from "react-router";
 import { Navigator, useNavigate } from "react-router";
+import Header from "./Header";
 export default function CreateDay(){
     const selectedCountry = useParams().eng;
     console.log(selectedCountry);
@@ -33,6 +34,7 @@ export default function CreateDay(){
     }
     return(
         <div>
+            <Header kind={selectedCountry} where={""}></Header>
             <h3>현재 일수: {days.length}</h3>
             <button onClick={addDay}>Day 추가</button>
         </div>

@@ -6,6 +6,7 @@ import Word, { Iword } from "./Word";
 import useFetch from "./hooks/useFetch";
 import React from "react";
 export default function Day(){
+    const where = "wordPage";
     const selectedCountry = useParams().eng;
     console.log(selectedCountry);
     const selectedDay = useParams<{day:string}>();
@@ -27,14 +28,14 @@ export default function Day(){
   
     return(
         <>
-        <Header kind={selectedCountry}></Header>
+        <Header kind={selectedCountry} where={where}></Header>
         <h2>Day : {day}</h2>
 
         <table>
         <thead>
             <tr>
                 <th>확인 여부</th>
-                { selectedCountry != "star" &&(<th>나만의 단어장에 추가</th>)}
+                { selectedCountry !== "star" &&(<th>나만의 단어장에 추가</th>)}
                 <th>{whatWord}</th>
                 <th>뜻</th>
                 <th>조작</th>

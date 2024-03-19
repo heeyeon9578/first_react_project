@@ -71,6 +71,26 @@
     {
       "id": "a2a6",
       "day": "12"
+    },
+    {
+      "id": "bafa",
+      "day": "30"
+    },
+    {
+      "id": "5c9a",
+      "day": "10"
+    },
+    {
+      "id": "72f2",
+      "day": "21"
+    },
+    {
+      "id": "133b",
+      "day": "22"
+    },
+    {
+      "id": "4d3d",
+      "day": "23"
     }
   ],
   "words": [
@@ -92,7 +112,7 @@
     },
     {
       "id": "105",
-      "day": 3,
+      "day": "3",
       "eng": "いぬ",
       "kor": "개",
       "isDone": false,
@@ -108,7 +128,7 @@
     },
     {
       "id": "3",
-      "day": 3,
+      "day": "3",
       "eng": "あとで [後で]",
       "kor": "나중에",
       "isDone": true,
@@ -124,7 +144,7 @@
     },
     {
       "id": "122",
-      "day": 5,
+      "day": "5",
       "eng": "orange",
       "kor": "오렌지",
       "isDone": true,
@@ -132,7 +152,7 @@
     },
     {
       "id": "109",
-      "day": 2,
+      "day": "2",
       "eng": "ばなな",
       "kor": "바나나",
       "isDone": false,
@@ -140,7 +160,7 @@
     },
     {
       "id": "104",
-      "day": 2,
+      "day": "2",
       "eng": "ねこ",
       "kor": "고양이",
       "isDone": false,
@@ -148,7 +168,7 @@
     },
     {
       "id": "2",
-      "day": 2,
+      "day": "2",
       "eng": "あか",
       "kor": "빨강",
       "isDone": false,
@@ -172,7 +192,7 @@
     },
     {
       "id": "116",
-      "day": 4,
+      "day": "4",
       "eng": "bird",
       "kor": "새",
       "isDone": true,
@@ -180,7 +200,7 @@
     },
     {
       "id": "113",
-      "day": 1,
+      "day": "1",
       "eng": "ぶどう",
       "kor": "포도",
       "isDone": false,
@@ -199,6 +219,14 @@
       "day": "12",
       "eng": "ㅕ",
       "kor": "ㅕ",
+      "isDone": false,
+      "isChecked": true
+    },
+    {
+      "id": "300",
+      "day": "10",
+      "eng": "とり",
+      "kor": "새",
       "isDone": false,
       "isChecked": true
     }

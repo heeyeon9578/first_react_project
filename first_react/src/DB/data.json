@@ -47,6 +47,10 @@
     {
       "id": "65fe",
       "day": "12"
+    },
+    {
+      "id": "65ff",
+      "day": "13"
     }
   ],
   "words": [
@@ -84,7 +88,7 @@
     },
     {
       "id": "114",
-      "day": 2,
+      "day": "2",
       "eng": "cat",
       "kor": "고양이",
       "isDone": false,
@@ -92,7 +96,7 @@
     },
     {
       "id": "117",
-      "day": 5,
+      "day": "5",
       "eng": "fish",
       "kor": "물고기",
       "isDone": false,
@@ -100,7 +104,7 @@
     },
     {
       "id": "118",
-      "day": 1,
+      "day": "1",
       "eng": "apple",
       "kor": "사과",
       "isDone": false,
@@ -108,7 +112,7 @@
     },
     {
       "id": "119",
-      "day": 2,
+      "day": "2",
       "eng": "banana",
       "kor": "바나나",
       "isDone": false,
@@ -116,7 +120,7 @@
     },
     {
       "id": "120",
-      "day": 3,
+      "day": "3",
       "eng": "strawberry",
       "kor": "딸기",
       "isDone": true,
@@ -124,7 +128,7 @@
     },
     {
       "id": "121",
-      "day": 4,
+      "day": "4",
       "eng": "watermelon",
       "kor": "수박",
       "isDone": false,
@@ -132,7 +136,7 @@
     },
     {
       "id": "123",
-      "day": 1,
+      "day": "1",
       "eng": "grape",
       "kor": "포도",
       "isDone": false,

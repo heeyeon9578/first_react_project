@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Header({kind}){
+export default function Header({kind, where}){
     let kindVal =  '';
     if(kind==="eng"){
         kindVal ="영단어";
@@ -12,6 +12,7 @@ export default function Header({kind}){
         kindVal = "";
     }
 
+    console.log(`where: ${where}`)
     return(
         <div className="header">
             <h1>
@@ -22,9 +23,18 @@ export default function Header({kind}){
                 <Link to={`/${kind}/create_word`} className="link">
                         단어 추가
                 </Link>
-                <Link to={`/${kind}/create_day`} className="link">
-                    Day 추가
-                </Link>
+                {where !=="wordPage" &&
+                (<>
+                    <Link to={`/${kind}/create_day`} className="link">
+                        Day 추가
+                    </Link>
+                    <Link to={`/${kind}/delete_day`} className="link">
+                        Day 삭제
+                    </Link>
+                </>
+                )
+                }
+                
                 <Link to={`/`} className="link">
                     홈으로
                 </Link>

@@ -1,6 +1,6 @@
 import DayList from "./component/DayList";
-import Header from "./component/Header";
 import CreateDay from "./component/CreateDay";
+import DeleteDay from "./component/DeleteDay";
 import Day from './component/Day';
 import CreateWord from "./component/CreateWord";
 import {BrowserRouter, Route, Routes} from 'react-router-dom'; 
@@ -18,7 +18,9 @@ function App() {
       <Route path="*" element={<EmptyPage></EmptyPage>}/>
       <Route path ="/:eng/create_word" element={<CreateWord></CreateWord>}/>
       <Route path ="/:eng/create_day" element={<CreateDay></CreateDay>}/>
-    
+      <Route path ="/:eng/delete_day" element={<DeleteDay></DeleteDay>}/>
+
+
     </Routes>
 
     </div>

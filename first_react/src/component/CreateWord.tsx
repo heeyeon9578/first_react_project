@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useState } from "react";
 import {IDay} from "./DayList";
+import Header from "./Header";
 import React from "react";
 export default function CreateWord(){
     const selectedCountry = useParams().eng;
+    let placeholderWord='';
     console.log(selectedCountry);
     let dayURL = '';
     let whatKind ='';
@@ -14,12 +16,15 @@ export default function CreateWord(){
     if(selectedCountry==="eng"){
         dayURL = "http://localhost:3001/words";
         whatKind='영단어';
+        placeholderWord = "computer";
     }else if(selectedCountry==="jap"){
         dayURL = "http://localhost:3002/words";
         whatKind='일본어 단어';
+        placeholderWord = "コンピュータ";
     }else{
         dayURL = "http://localhost:3003/words";
         whatKind='나만의 단어';
+        placeholderWord = "computer/ コンピュータ";
     }
 
     let dayURL2 = '';
@@ -72,10 +77,12 @@ export default function CreateWord(){
     let uniqueDays = new Map<string, IDay>();
     uniqueDays = new Map(days.map(day => [day.day, day]));
     return(
+        <>
+        <Header kind={selectedCountry} where={""}></Header>
         <form onSubmit={onSubmit}>
             <div className="input_area"> 
                 <label>{whatKind}</label>
-                <input type="text" placeholder="computer" ref={engRef}></input>
+                <input type="text" placeholder={placeholderWord} ref={engRef}></input>
             </div>
             <div className="input_area">
                 <label>Kor</label>
@@ -101,5 +108,7 @@ export default function CreateWord(){
                 opacity: isLoading? 0.3: 1,
             }} type="submit"> {isLoading? "Saving...": "저장"}</button>
         </form>
+        </>
+        
     )
 }
