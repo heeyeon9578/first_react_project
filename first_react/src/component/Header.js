@@ -20,9 +20,12 @@ export default function Header({kind, where}){
              </h1>
 
              <div className="menu">
+                {where ==="wordPage"&&
                 <Link to={`/${kind}/create_word`} className="link">
-                        단어 추가
+                    단어 추가
                 </Link>
+                }
+                
                 {where !=="wordPage" &&
                 (<>
                     <Link to={`/${kind}/create_day`} className="link">
